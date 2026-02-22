@@ -1,43 +1,25 @@
-# Astro Starter Kit: Minimal
+# Sayan Sharma - CS Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A minimalist and efficient computer science portfolio website built with vite, tailwind and Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## �️ Tech Stack & Tools
 
-## 🚀 Project Structure
+* **[Astro](https://astro.build/)** - Core framework. Chosen for its zero-JS-by-default output and incredibly fast static site generation.
+* **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first styling framework used to build the bespoke, responsive dark theme.
+* **[Motion One](https://motion.dev/)** - A tiny, high-performance animation library utilizing the native Web Animations API for smooth scroll-reveal effects.
+* **[Pixelarticons](https://pixelarticons.com/)** - Retro, 8-bit aesthetic icons used for section headers and UI elements.
+* **[Simple Icons](https://simpleicons.org/)** - Used via CDN for accurate, brand-colored vector logos in the Skills section.
+* **Typography** - `@fontsource/geist-mono` for technical metadata alongside system sans-serif fonts for optimal readability.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📂 Project Structure
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+All content is component-driven for easy maintenance. Key content files include:
+* `src/components/Hero.astro` - Introduction and social links.
+* `src/components/Coursework.astro` - Relevant academic courses.
+* `src/components/Experience.astro` - Professional roles.
+* `src/components/Education.astro` - Academic history.
+* `src/components/Projects.astro` - Featured GitHub repositories.
+* `src/components/Skills.astro` - Languages and tools.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+*Designed and built by [Sayan Sharma](https://github.com/Sayan090807).*
