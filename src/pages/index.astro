@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Coursework from '../components/Coursework.astro';
+import Education from '../components/Education.astro';
+import Experience from '../components/Experience.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+    <main class="space-y-12 flex flex-col w-full">
+        <!-- Hero Section -->
+        <Hero />
+        
+        <!-- Row 1: Education and Experience (Side by Side) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-6 items-start">
+            <Education />
+            <Experience />
+        </div>
+        
+        <!-- Coursework Section -->
+        <Coursework />
+        
+        <!-- Row 2: Projects and Skills (Side by Side) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-6 items-start">
+            <Projects />
+            <Skills />
+        </div>
+        
+        <Footer />
+    </main>
+</Layout>
+
+<script>
+    import { animate, inView } from "motion";
+
+    // Simple fade in and slide up reveal for sections as they scroll into view
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section, footer");
+        
+        sections.forEach((section) => {
+             inView(section, () => {
+                animate(
+                    section,
+                    { opacity: [0, 1], y: [20, 0] },
+                    { duration: 0.6, easing: [0.17, 0.55, 0.55, 1] }
+                );
+             }, { margin: "-10%" });
+        });
+    });
+</script>

@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-100: #e2e8f0;
+  --color-brand-200: #cbd5e1;
+  --color-brand-300: #94a3b8;
+  --color-brand-400: #64748b;
+  --color-brand-500: #475569;
+  --color-brand-600: #334155;
+  --color-brand-700: #1e293b;
+  --color-brand-800: #0f172a;
+  --color-brand-900: #020617;
+  
+  --font-mono: "Geist Mono", monospace;
+  --font-sans: "Inter", "Geist", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-brand-900 text-brand-200 antialiased selection:bg-brand-700 selection:text-brand-100;
+  }
+  
+  body {
+    @apply m-0 p-0 font-sans flex flex-col min-h-screen selection:bg-brand-700 selection:text-brand-100;
+  }
+  
+  ::selection {
+    background-color: var(--color-brand-700);
+    color: var(--color-brand-100);
+  }
+}

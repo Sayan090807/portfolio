@@ -1,0 +1,43 @@
+---
+// Experience.astro
+const experiences = [
+    {
+        role: "Researcher",
+        company: "ACM at UC Santa Cruz",
+        description: "Exploring multimodal hallucination mitigation techniques in cross-image hallucination in a focused team setting.",
+        year: "Oct 2025 - Present",
+        logo: "/logos/ACM.png"
+    },
+    {
+        role: "Software Intern",
+        company: "ModalAI",
+        description: "Enhanced autonomous drone navigation and flight control by developing and debugging PX4-based systems on VOXL boards, improving flight stability across test missions.",
+        year: "Jun 2024 - Aug 2024",
+        logo: "/logos/ModalAI.png"
+    }
+];
+---
+
+<section class="opacity-0 h-full">
+  <h3 class="flex items-center gap-3 text-brand-400 font-mono text-xs tracking-[0.2em] mb-8 uppercase">
+    <i class="pixelart-icons-font-briefcase-account"></i> Experience
+  </h3>
+  
+  <div class="flex flex-col border-t border-brand-800 transition-colors h-full">
+    {experiences.map((exp) => (
+      <div class="group flex flex-col py-6 border-b border-brand-800 hover:bg-brand-800/30 transition-all duration-300 normal-case px-2 -mx-2 rounded-sm cursor-default">
+        <div class="flex items-center justify-between gap-4 mb-2">
+            <span class="text-brand-100 font-medium group-hover:text-amber-500 transition-colors flex items-center gap-3">
+                <img src={exp.logo} alt={`${exp.company} logo`} class="w-6 h-6 rounded-sm" loading="lazy" />
+                {exp.role}
+            </span>
+            <span class="text-brand-600 font-mono text-[10px] uppercase tracking-wider text-right">{exp.year}</span>
+        </div>
+        <div class="flex flex-col ml-9">
+            <span class="text-brand-300 font-mono text-[10px] uppercase tracking-wider mb-2">{exp.company}</span>
+            <p class="text-brand-400 text-sm leading-relaxed">{exp.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

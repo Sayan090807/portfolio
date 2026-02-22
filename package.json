@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource/geist-mono": "^5.2.7",
+    "@tailwindcss/vite": "^4.2.0",
+    "astro": "^5.17.1",
+    "motion": "^12.34.3",
+    "pixelarticons": "^1.8.2",
+    "tailwindcss": "^4.2.0"
+  }
+}

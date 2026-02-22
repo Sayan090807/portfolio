@@ -1,0 +1,27 @@
+---
+// Coursework.astro
+const courses = [
+    { name: "Computer Systems", icon: "pixelart-icons-font-device-laptop" },
+    { name: "Discrete Mathematics", icon: "pixelart-icons-font-book-open" },
+    { name: "Multivariate Calculus", icon: "pixelart-icons-font-chart-multiple" },
+    { name: "Linear Algebra", icon: "pixelart-icons-font-chart-bar" },
+    { name: "C Programming", icon: "pixelart-icons-font-code" },
+    { name: "Data Structures & Algorithms", icon: "pixelart-icons-font-book" },
+    { name: "Brain-Inspired Machine Learning", icon: "pixelart-icons-font-article" }
+];
+---
+
+<section class="opacity-0">
+  <h3 class="flex items-center gap-3 text-brand-400 font-mono text-xs tracking-[0.2em] mb-6 uppercase">
+    <i class="pixelart-icons-font-script"></i> Relevant Coursework
+  </h3>
+  
+  <div class="flex flex-wrap gap-3">
+    {courses.map((course) => (
+      <div class="flex items-center gap-2 border border-brand-800 bg-brand-900/50 px-3 py-2 rounded-sm text-brand-200 text-xs font-mono uppercase tracking-wider hover:border-amber-500/50 hover:text-amber-500 transition-colors cursor-default">
+        <i class={`${course.icon} text-lg opacity-80`}></i>
+        {course.name}
+      </div>
+    ))}
+  </div>
+</section>
